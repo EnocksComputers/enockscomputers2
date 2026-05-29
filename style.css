@@ -1,0 +1,181 @@
+/* =============================================
+   UNAB - Uganda National Association of the Blind
+   CSS File - Modern & Accessible Design
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ===================== HEADER ===================== */
+
+header {
+    background-color: #004d00; /* Deep Green */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    height: 80px;
+    width: auto;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* Gold hover effect */
+}
+
+/* ===================== MAIN CONTENT ===================== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+marquee {
+    background-color: #ffd700;
+    color: #004d00;
+    padding: 12px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+/* Table Styling */
+h2 {
+    color: #004d00;
+    margin: 30px 0 15px;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #004d00;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Lists */
+ol {
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #004d00;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+    opacity: 0.95;
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    nav {
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    marquee {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 15px;
+    }
+}
+
+/* ===================== ACCESSIBILITY IMPROVEMENTS ===================== */
+a:focus, button:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 4px;
+}
+
+/* Better contrast for visually impaired users */
+h1, h2, h3 {
+    font-weight: 700;
+}

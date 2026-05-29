@@ -1,0 +1,235 @@
+/* =============================================
+   UNAB - Uganda National Association of the Blind
+   Professional CSS (v3) - Supports All Pages
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-color: #004d00;
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header img {
+    height: 85px;
+    width: auto;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+    transform: translateY(-2px);
+}
+
+/* ===================== MAIN CONTENT ===================== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    color: #004d00;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ffd700;
+    padding-bottom: 12px;
+}
+
+h2 {
+    color: #006600;
+    margin: 35px 0 15px;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 8px;
+}
+
+p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+/* ===================== FORM STYLING (Contact Page) ===================== */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+label {
+    font-weight: 600;
+    color: #004d00;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #004d00;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 77, 0, 0.1);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #004d00;
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #006600;
+    transform: translateY(-2px);
+}
+
+/* ===================== TABLES ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+th {
+    background-color: #004d00;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* ===================== IMAGES ===================== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #004d00;
+    color: white;
+    padding: 45px 5%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+    
+    nav {
+        gap: 20px;
+    }
+    
+    h1 {
+        font-size: 1.95rem;
+    }
+    
+    form {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 15px;
+    }
+}
+
+/* ===================== ACCESSIBILITY ===================== */
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 4px;
+}

@@ -1,0 +1,203 @@
+/* =============================================
+   UNAB - Uganda National Association of the Blind
+   Professional & Accessible CSS (v2)
+   Works well for Home + About pages
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-color: #004d00;           /* Deep Green */
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header img {
+    height: 85px;
+    width: auto;
+    border-radius: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;      /* Gold */
+    transform: translateY(-2px);
+}
+
+/* ===================== MAIN CONTENT ===================== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Headings */
+h1 {
+    color: #004d00;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ffd700;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #006600;
+    margin: 35px 0 15px;
+    border-bottom: 3px solid #ffd700;
+    padding-bottom: 8px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+th {
+    background-color: #004d00;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+/* Lists */
+ol {
+    padding-left: 28px;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+    background-color: #004d00;
+    color: white;
+    padding: 45px 5%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer h3 {
+    color: #ffd700;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 8px;
+    opacity: 0.95;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 5%;
+    }
+    
+    nav {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 1.9rem;
+    }
+    
+    table {
+        font-size: 0.95rem;
+    }
+    
+    th, td {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 15px;
+    }
+}
+
+/* ===================== ACCESSIBILITY ===================== */
+a:focus, button:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 4px;
+}
+
+/* Improve readability for visually impaired users */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+main {
+    font-size: 1.05rem;
+}
